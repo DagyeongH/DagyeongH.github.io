@@ -5,5 +5,5 @@ permalink: /categories/Project/
 author_profile: true
 taxonomy: Project
 sidebar:
-  nav: "categories"
+  nav: "categories"  
 ---
