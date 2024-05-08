@@ -12,8 +12,8 @@ permalink: /retrospective/[회고]-깃허브-블로그-제작기/ # 포스트 UR
 toc: true # 우측에 본문 목차 네비게이션 생성
 toc_sticky: true # 본문 목차 네비게이션 고정 여부
 
-date: 2024-05-09 # 작성 날짜
-last_modified_at: 2024-05-09 # 최종 수정 날짜
+date: 2024-05-08 # 작성 날짜
+last_modified_at: 2024-05-08 # 최종 수정 날짜
 ---
 
 ### 📌 블로그 제작
