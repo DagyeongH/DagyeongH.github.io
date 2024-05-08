@@ -7,3 +7,4 @@ taxonomy: Algorithm
 sidebar:
   nav: "categories"
 ---
+  
