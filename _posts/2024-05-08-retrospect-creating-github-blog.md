@@ -65,9 +65,9 @@ readme_text = f"{markdown_text}{latest_blog_post_list}"
 
 with open("README.md", 'w', encoding='utf-8') as f:
     f.write(readme_text)
-```   
+```
 
-3⃣ **github action 추가**    
+3️⃣ **github action 추가**    
 - username repo 메뉴 중 Actions에서 **python application workflow**를 추가   
 - 아래와 같이 코드를 수정   
 
