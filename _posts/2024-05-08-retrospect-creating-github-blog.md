@@ -25,9 +25,9 @@ last_modified_at: 2024-05-08 # 최종 수정 날짜
 약간 헤멨던 부분은 **댓글 기능**이었는데,  
 블로그 댓글용 repo를 private로 팠더니 뜨지 않아서 **public**으로 바꿔주니 금방 해결했다.  
 
-파일을 업로드 후 포스팅이 안되는 문제가 발생했다.
-블로그 설정을 처음부터 다시 시도했지만 해결하지 못했다.
-이후, 다른 블로그에서 포스팅 날짜가 **utc 기준**이라는 것을 알게됐고, 하루 전 날짜로 변경하니 실행됐다.
+파일을 업로드 후 포스팅이 안되는 문제가 발생했다.  
+블로그 설정을 처음부터 다시 시도했지만 해결하지 못했다.  
+이후, 다른 블로그에서 포스팅 날짜가 **utc 기준**이라는 것을 알게됐고, **하루 전 날짜**로 변경하니 포스팅 성공했다.     
 
 ### 📌 update README.md   
 벨로그는 블로그 포스트를 **velog-readme-stats**를 통해 깃허브에서 보여줬다.  
@@ -35,42 +35,9 @@ last_modified_at: 2024-05-08 # 최종 수정 날짜
 
 자세한 설명은 위 블로그의 글을 참고하면 되고, 아래는 간단한 설명이다.  
 
-1. **blog repo에 feed.xml 추가**   
-
-```xml
----
-layout: null
----
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:30 %}
-      <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
-      </item>
-    {% endfor %}
-  </channel>
-</rss>
-```    
+1️⃣ **blog repo에 feed.xml 추가**     
  
-2. **username repo에 update_readme.py 추가**   
+2️⃣ **username repo에 update_readme.py 추가**   
 
 ```python
 import feedparser
@@ -100,7 +67,7 @@ with open("README.md", 'w', encoding='utf-8') as f:
     f.write(readme_text)
 ```   
 
-3. **github action 추가**    
+3⃣ **github action 추가**    
 - username repo 메뉴 중 Actions에서 **python application workflow**를 추가   
 - 아래와 같이 코드를 수정   
 
