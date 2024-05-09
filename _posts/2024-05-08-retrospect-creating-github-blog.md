@@ -18,7 +18,7 @@ last_modified_at: 2024-05-08 # 최종 수정 날짜
 
 ### 📌 블로그 제작
 여러 블로그 플랫폼을 거쳤지만, 결국 깃허브 블로그를 제작하게 되었다.  
-물론 자체 제작은 아니고 [*choiiis*님의 블로그](https://github.com/choiiis/minimal-mistakes-choiiis-customized)를 fork해서 만들었다.  
+물론 자체 제작은 아니고 [*choiiis*님 블로그](https://github.com/choiiis/minimal-mistakes-choiiis-customized)를 fork해서 만들었다.  
   
 블로그 설정은 choiiis님이 작성하신 README 파일만 보고도 쉽게 따라 할 수 있었다.   
   
@@ -26,8 +26,10 @@ last_modified_at: 2024-05-08 # 최종 수정 날짜
 블로그 댓글용 repo를 private로 팠더니 뜨지 않아서 **public**으로 바꿔주니 금방 해결했다.  
 
 파일을 업로드 후 포스팅이 안되는 문제가 발생했다.  
-블로그 설정을 처음부터 다시 시도했지만 해결하지 못했다.  
-이후, 다른 블로그에서 포스팅 날짜가 **utc 기준**이라는 것을 알게됐고, **하루 전 날짜**로 변경하니 포스팅 성공했다.     
+블로그 설정을 처음부터 다시 해보고, 카테고리 이름도 영어로 바꿔봤지만 해결하지 못했다.  
+이후, 다른 블로그를 통해 포스팅 날짜가 **utc 기준**이라는 것을 알게됐고,  
+**하루 전 날짜**로 변경하니 포스팅 성공했다!     
+앞으로 새벽에 글을 쓸 일이 있다면 전 날짜로 작성해야겠다.  
 
 ### 📌 update README.md   
 벨로그는 블로그 포스트를 **velog-readme-stats**를 통해 깃허브에서 보여줬다.  
